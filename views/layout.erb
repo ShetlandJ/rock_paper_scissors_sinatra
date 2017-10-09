@@ -34,7 +34,35 @@
   </ul>
   <h1>GAME RESULT:</h1>
   </h3>
-  <div id="game_results"><%= yield %></div>
+  <div id="game_results"><%= yield %>
+    <a href="javascript:openSite()">Play again?</a>
+</div>
+
+<script>
+var links = [
+              "localhost:4567/rock/paper",
+              "localhost:4567/rock/scissors",
+              "localhost:4567/paper/rock",
+              "localhost:4567/scissors/rock",
+              "localhost:4567/scissors/paper",
+              "localhost:4567/paper/scissors",
+]
+
+           var openSite = function() {
+              // get a random number between 0 and the number of links
+              var randIdx = Math.random() * links.length;
+              // round it, so it can be used as array index
+              randIdx = parseInt(randIdx, 10);
+              // construct the link to be opened
+              var link = 'http://' + links[randIdx];
+
+     var win = window.open(link, '_blank');
+     win.focus();
+
+    };
+</script>
+
+
 </body>
 
 </html>
