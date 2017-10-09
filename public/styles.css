@@ -1,0 +1,21 @@
+body {
+  background-color: lightBlue;
+  color: black;
+  font-family: Arial; sans-serif;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+#game_results {
+  padding: 15px 15px 15px 15px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 5px;
+  font-family: Arial;
+}
